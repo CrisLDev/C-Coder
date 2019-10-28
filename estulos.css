@@ -3,22 +3,8 @@
 *{
   margin: 0;
   padding: 0;
-}
-
-body{
-  background-color: fff;
-  color: black;
-  font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
-}
-
-a{
-  text-decoration: none;
-  color: #fff!important;
-}
-
-li{
-  list-style: none;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .contenedor {
@@ -33,15 +19,15 @@ li{
 
 /* Estilos para la Navbar */
 
-.navbar{
-  display: flex!important;
-  align-items: center;
+nav{
+  display: flex;
   justify-content: space-between;
+  align-items: center;
   min-height: 8vh;
-  padding-top: .8rem;
-  padding-bottom: .8rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-top: .9em;
+  padding-bottom: .9em;
+  padding-left: 2rem;
+  padding-right: 2rem;
   background: rgba(169,3,41,1);
   background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
   background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
@@ -50,6 +36,26 @@ li{
   background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
   background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
+}
+
+.logo{
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.ulinks{
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.ulinks, .unlinks li{
+  list-style: none;
+}
+
+.ulinks, .unlinks, .logo a{
+  text-decoration: none;
+  color: #fff!important;
 }
 
 /*Deostracion de como se usa el grid system
@@ -61,6 +67,13 @@ li{
 .ulinksitem{
   color: #E9ECF4;
   padding: .5rem;
+}
+
+.ulinksitem:hover{
+  color:rgba(169,3,41,1);
+  background-color: seashell;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 .btn{
@@ -77,22 +90,6 @@ li{
   transition-timing-function: ease-in;
 }
 
-.logo{
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.flex{
-  display: flex;
-  align-items: center;
-}
-
-.ulinks{
-  display: flex;
-  justify-content: space-around;
-  width: 30%;
-}
-
 .separador-v{
   display: none;
   width: 2px;
@@ -100,10 +97,30 @@ li{
   background-color: seashell;
 }
 
-@media (max-width: 1024px) { 
+@media (max-width: 1270px) { 
+  .ulinks{
+    width: 40%;
+  }
+}
+
+@media (max-width: 970px) { 
+  .ulinks{
+    width: 50%;
+  }
+}
+
+@media (max-width: 830px) { 
+  .ulinks{
+    width: 50%;
+  }
+
+}
+
+@media (max-width: 700px) { 
   .ulinks{
     width: 60%;
   }
+
 }
 
 @media (max-width: 600px) { 
@@ -113,13 +130,6 @@ li{
 
   .ulinks{
     width: 40%;
-  }
-
-  .ulinksitem:hover{
-    color:rgba(169,3,41,1);
-    background-color: seashell;
-    border-radius: 3px;
-    cursor: pointer;
   }
     .separador-v{
       display: block;
