@@ -1,0 +1,127 @@
+/* Quitar todo lo que viene por defecto en el body*/
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: fff;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: #fff!important;
+}
+
+li{
+  list-style: none;
+}
+
+.contenedor {
+  margin: 20px;
+  border: 1px solid black;
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns:repeat(11, 1fr);
+  grid-template-rows:repeat(1fr, auto);
+  justify-content: space-between;
+}
+
+/* Estilos para la Navbar */
+
+.navbar{
+  display: flex!important;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 8vh;
+  padding-top: .8rem;
+  padding-bottom: .8rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background: rgba(169,3,41,1);
+  background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
+  background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
+}
+
+/*Deostracion de como se usa el grid system
+.links{
+  grid-column: 3/10;
+  box-sizing: border-box;
+}*/
+
+.ulinksitem{
+  color: #E9ECF4;
+  padding: .5rem;
+}
+
+.btn{
+  border: 1px solid #E9ECF4;
+  border-radius: .25rem;
+  padding: .375rem .75rem!important;
+}
+
+.btn:hover{
+  color: rgba(169,3,41,1) !important;
+  background-color: white;
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+}
+
+.logo{
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.flex{
+  display: flex;
+  align-items: center;
+}
+
+.ulinks{
+  display: flex;
+  justify-content: space-around;
+  width: 30%;
+}
+
+.separador-v{
+  display: none;
+  width: 2px;
+  height: 30px;
+  background-color: seashell;
+}
+
+@media (max-width: 1024px) { 
+  .ulinks{
+    width: 60%;
+  }
+}
+
+@media (max-width: 600px) { 
+  .ocultar{
+    display: none;
+  }
+
+  .ulinks{
+    width: 40%;
+  }
+
+  .ulinksitem:hover{
+    color:rgba(169,3,41,1);
+    background-color: seashell;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+    .separador-v{
+      display: block;
+  }
+}
