@@ -1,9 +1,11 @@
 const navSlide = () => {
-    const burger1 = document.querySelector('.burger1');
-    const div = document.querySelector('.info_style');
+    const burger = document.querySelector('.burger');
+    const div = document.querySelector('.info');
+    const i = document.querySelector('.fa-arrow-right')
 
-    burger1.addEventListener('click', () => {
+    burger.addEventListener('click', () => {
         div.classList.toggle('info-active');
+        i.classList.toggle('rotada');
     });
 }
 

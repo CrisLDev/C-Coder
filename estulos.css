@@ -100,9 +100,44 @@ nav{
   box-sizing: border-box;
 }*/
 
+/* Redes Sociales Desplegables */
+.info{
+  position: fixed;
+  display: flex;
+  padding-top: 100px;
+  transform: translateX(-52%);
+  transition: transform 0.4s ease-in-out;
+  opacity: 0.1;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+}
+
+.info-active{
+  transform: translateX(0);
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+}
+
+.burger > i{
+  color: white;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+}
+
+.rotada{
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+}
+
 .f-awesome-size{
   color: #fff;
-  font-size: 30px;
+  font-size: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 2px;
@@ -110,60 +145,48 @@ nav{
 }
 
 .redes-sociales{
-  margin-top: 100px; 
-  background: rgba(169,3,41,1);
-  background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
-  background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
-  position: fixed;
-  display: flex; 
+  background-color: rgba(28, 28, 28, 1);
+  display: flex;
+  border-radius: 0px 0px 2px;
   align-items: center; 
   justify-content: space-around;
   flex-direction: column;
-  border-radius: 2px; 
   padding: 10px; 
-  border-top: 3px solid white; 
-  border-bottom: 3px solid white;   
-  border-right: 3px solid white; 
   box-shadow: 10px 10px 102px 0px rgba(0,0,0,0.2);
 }
 
-.burger1{
-  margin-top: 100px;
-  margin-left: 57px;
-  background: rgba(169,3,41,1);
-  background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
-  background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  background: linear-gradient(to right, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
-  position: fixed;
-  border-radius: 2px; 
-  border-top: 3px solid white; 
-  border-bottom: 3px solid white;   
-  border-right: 3px solid white; 
+.burger{
+  float: left;
+  height: 37px;
+  margin-left: -3px;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  border-radius: 2px;
   box-shadow: 10px 10px 102px 0px rgba(0,0,0,0.2);
-}
-
-.info{
-  transform: translateX(-50px);
-  transition: transform 0.4s ease-in-out;
-}
-
-.info-active{
-  transform: translateX(0);
+  background-color: rgba(28, 28, 28, 1);
 }
 
 @media (max-width: 1270px) {
   /*Media Querys De La Navbar*/ 
   .ulinks{
     width: 40%;
+  }
+
+  .info{
+    transform: translateX(-56%);
+    transition: transform 0.4s ease-in-out;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+  }
+
+  .info-active{
+    transform: translateX(0);
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
   }
 }
 
